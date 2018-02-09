@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ibm.iotsecuritydemo.androidclient.ui.activities.MainActivity">
+
+    <!-- RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/pageLoading"
+        android:background="@android:color/transparent" -->
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darker_gray_translucent"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:visibility="invisible" />
+    <!-- /RelativeLayout -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ibm_iot_demo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentStart="false"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@android:color/holo_green_dark"
+            android:clickable="true"
+            android:paddingBottom="@dimen/appbar_padding_top"
+            android:paddingEnd="@dimen/appbar_padding_top"
+            android:paddingLeft="@dimen/appbar_padding_top"
+            android:paddingRight="@dimen/appbar_padding_top"
+            android:paddingStart="@dimen/appbar_padding_top"
+            android:paddingTop="@dimen/appbar_padding_top"
+            android:text="@string/monitor_device"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large.Inverse" />
+
+        <Button
+            android:id="@+id/btn_login_anon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@android:color/holo_green_dark"
+            android:clickable="true"
+            android:paddingBottom="@dimen/appbar_padding_top"
+            android:paddingEnd="@dimen/appbar_padding_top"
+            android:paddingLeft="@dimen/appbar_padding_top"
+            android:paddingRight="@dimen/appbar_padding_top"
+            android:paddingStart="@dimen/appbar_padding_top"
+            android:paddingTop="@dimen/appbar_padding_top"
+            android:text="@string/monitor_anon"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large.Inverse" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
