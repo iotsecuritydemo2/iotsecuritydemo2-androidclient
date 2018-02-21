@@ -115,4 +115,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
+
+    public void hideProgress() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                progressBar.setVisibility(View.GONE);
+                findViewById(R.id.mainPage).bringToFront();
+            }
+        });
+    }
 }
